@@ -1,0 +1,20 @@
+@keyframes train {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-320px); /* 4 images x 80px = 320 */
+  }
+}
+
+.animate-train {
+  animation: train 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Optimize for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-train {
+    animation: none;
+  }
+}
